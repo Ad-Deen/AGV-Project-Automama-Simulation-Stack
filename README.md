@@ -60,7 +60,19 @@ The **control and perception stacks** of Automama have been successfully deploye
 
 ### 📂 Folder Structure (Suggested)
 
-<pre> 📁 <b>automama_simulation/</b> ├── 📁 <b>models/</b> # All custom Gazebo models │ ├── 📁 <b>automama_vehicle/</b> # URDF, mesh, and sensor plugins for the vehicle │ └── 📁 <b>campus_assets/</b> # Buildings, roads, trees, and other environmental models ├── 📁 <b>worlds/</b> # Gazebo world files │ └── 🗎 <b>automama_campus.world</b> # Main world file replicating the campus ├── 📁 <b>launch/</b> # ROS 2 launch files for simulation │ └── 🗎 <b>simulation_launch.py</b> # Launches Gazebo with the world and robot ├── 📁 <b>config/</b> # Parameter configs for vehicle and simulation │ └── 🗎 <b>vehicle_params.yaml</b> # Vehicle tuning parameters (steering, motor, sensors) ├── 📁 <b>rviz/</b> # RViz visualization configs │ └── 🗎 <b>automama_nav.rviz</b> # RViz setup for navigation and debugging └── 🗎 <b>README.md</b> # This documentation file </pre>
+<pre> 📁 <b>automama_simulation/</b> 
+  ├── 📁 <b>models/</b> # All custom Gazebo models 
+  │ ├── 📁 <b>automama_vehicle/</b> # URDF, mesh, and sensor plugins for the vehicle 
+  │ └── 📁 <b>campus_assets/</b> # Buildings, roads, trees, and other environmental models 
+  ├── 📁 <b>worlds/</b> # Gazebo world files 
+  │ └── 🗎 <b>automama_campus.world</b> # Main world file replicating the campus 
+  ├── 📁 <b>launch/</b> # ROS 2 launch files for simulation 
+  │ └── 🗎 <b>simulation_launch.py</b> # Launches Gazebo with the world and robot 
+  ├── 📁 <b>config/</b> # Parameter configs for vehicle and simulation 
+  │ └── 🗎 <b>vehicle_params.yaml</b> # Vehicle tuning parameters (steering, motor, sensors) 
+  ├── 📁 <b>rviz/</b> # RViz visualization configs 
+  │ └── 🗎 <b>automama_nav.rviz</b> # RViz setup for navigation and debugging 
+  └── 🗎 <b>README.md</b> # This documentation file </pre>
 ---
 
 ---
