@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf version='1.8'>
+
+<world name="automama_steering">
+
+    <physics name="1ms" type="ignored">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+    <plugin
+      filename="ignition-gazebo-physics-system"
+      name="gz::sim::systems::Physics">
+    </plugin>
+    <plugin
+      filename="ignition-gazebo-user-commands-system"
+      name="gz::sim::systems::UserCommands">
+    </plugin>
+    <plugin
+      filename="ignition-gazebo-scene-broadcaster-system"
+      name="gz::sim::systems::SceneBroadcaster">
+    </plugin>
+
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>1 1 1 1</diffuse>
+      <specular>0.5 0.5 0.5 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>1000 1000</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>50</mu>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+  <model name='automama'>
+   <pose>0 0 10 0 0 0</pose>
+    <self_collide>false</self_collide>
+    <static>false</static>
+    <link name="chassis">
+      <inertial>
+        <pose>-0.4195547534585827 0.22272554711801903 0.5183555009387848 0 0 0</pose>
+        <mass>115</mass>
+        <inertia>
+          <ixx>33</ixx>
+          <ixy>0.102</ixy>
+          <ixz>2.864246</ixz>
+          <iyy>61</iyy>
+          <iyz>-0.034967</iyz>
+          <izz>41</izz>
+        </inertia>
+      </inertial>
+      <gravity>true</gravity>
+      <velocity_decay/>
+      <visual name="chassis_visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>base_link.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.5 0.5 1.0 1</ambient>
+          <diffuse>0.5 0.5 1.0 1</diffuse>
+          <specular>0.0 0.0 1.0 1</specular>
+        </material>
+      </visual>
+      <collision name="chassis_collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>base_link.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name="wheel3_1">
+      
+      <pose>-1.3959603981095192e-07 -0.04494836313818579 -4.357814130662163e-07 0 0 0</pose>
+      <inertial>  
+        <mass>20</mass>
+        <inertia>
+          <ixx>0.275927</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.536625</iyy>
+          <iyz>0</iyz>
+          <izz>0.275927</izz>
+        </inertia>
+      </inertial>
+      <gravity>true</gravity>
+      <velocity_decay/>
+      <visual name="wheel3_1_visual">
+        <pose>-0.043639 0.09661 -0.252796 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>wheel3_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+            <ambient>0.2 0.2 0.2 1</ambient>
+            <diffuse>0.2 0.2 0.2 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+          </material>
+      </visual>
+      <collision name="wheel3_1_collision">
+        <pose>-0.043639 0.09661 -0.252796 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>wheel3_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>1.0</mu2>
+                <fdir1>0 0 1</fdir1>
+              </ode>
+            </friction>
+          </surface>
+      </collision>
+    </link>
+
+
+    <link name="wheel4_1">
+      <inertial>
+      <pose>-1.3193427806507119e-07 0.044948129030530914 -4.432851846147834e-07 0 0 0</pose>
+        <mass>20</mass>
+        <inertia>
+          <ixx>0.275927</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.536625</iyy>
+          <iyz>0</iyz>
+          <izz>0.275927</izz>
+        </inertia>
+      </inertial>
+      <gravity>true</gravity>
+      <visual name="wheel4_1_visual">
+        <pose>-0.043639 -0.54339 -0.252796 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>wheel4_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+            <ambient>0.2 0.2 0.2 1</ambient>
+            <diffuse>0.2 0.2 0.2 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+          </material>
+      </visual>
+      <collision name="wheel4_1_collision">
+        <pose>-0.043639 -0.54339 -0.252796 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>wheel4_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>1.0</mu2>
+                <fdir1>0 0 1</fdir1>
+              </ode>
+            </friction>
+          </surface>
+      </collision>
+    </link>
+
+    <link name="wheel2_1">
+      <inertial>
+        <pose>-1.3690663536181091e-07 0.0672954800029184 -4.334913943915275e-07 0 0 0</pose>
+        <mass>19.53581228545425</mass>
+        <inertia>
+          <ixx>0.276668</ixx>
+          <iyy>0.536716</iyy>
+          <izz>0.276668</izz>
+          <ixy>0.0</ixy>
+          <iyz>0.0</iyz>
+          <ixz>0.0</ixz>
+        </inertia>
+      </inertial>
+      <gravity>true</gravity>
+      
+      <visual name="wheel2_1_visual">
+        <pose>1.136361 -0.542437 -0.252796 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>wheel2_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+            <ambient>0.2 0.2 0.2 1</ambient>
+            <diffuse>0.2 0.2 0.2 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+          </material>
+      </visual>
+      <collision name="wheel2_1_collision">
+        <pose>1.136361 -0.542437 -0.252796 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>wheel2_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>1.0</mu2>
+                <fdir1>0 0 1</fdir1>
+              </ode>
+            </friction>
+          </surface>
+      </collision>
+    </link>
+
+    <link name="wheel1_1">
+      <inertial>
+      <pose>-1.3933370746066487e-07 -0.04494836313818579 -4.4256888215299384e-07 0 0 0</pose>
+        <mass>20</mass>
+        <inertia>
+          <ixx>0.275927</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.536625</iyy>
+          <iyz>0</iyz>
+          <izz>0.275927</izz>
+        </inertia>
+      </inertial>
+      <gravity>true</gravity>
+      
+      <visual name="wheel1_1_visual">
+        <pose>1.136361 0.09661 -0.252796 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>wheel1_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+            <ambient>0.2 0.2 0.2 1</ambient>
+            <diffuse>0.2 0.2 0.2 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+          </material>
+      </visual>
+      <collision name="wheel1_1_collision">
+        <pose>1.136361 0.09661 -0.252796 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>wheel1_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>1.0</mu2>
+                <fdir1>0 0 1</fdir1>
+              </ode>
+            </friction>
+          </surface>
+      </collision>
+    </link>
+
+    <link name="wheel1_link_1">
+      <inertial>
+      <pose>-1.355089531696052e-07 -0.011876851439479072 -0.09132946238565198 0 0 0</pose>
+        <mass>0.68</mass>
+        <inertia>
+          <ixx>0.000711</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.000693</iyy>
+          <iyz>1.1e-05</iyz>
+          <izz>0.000162</izz>
+        </inertia>
+      </inertial>
+      <gravity>true</gravity>
+      <visual name="wheel1_link_1_visual">
+        <pose>1.136361 0.06361 -0.342796 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>wheel1_link_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+            <ambient>0.2 0.2 0.2 1</ambient>
+            <diffuse>0.2 0.2 0.2 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+          </material>
+      </visual>
+    </link>
+
+
+    <link name="wheel2_link_1">
+      <inertial>
+      <pose>-1.3550895072711455e-07 0.01206275012818847 -0.09138140441465087 0 0 0</pose>
+        <mass>0.68</mass>
+        <inertia>
+          <ixx>0.000711</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.000693</iyy>
+          <iyz>1.1e-05</iyz>
+          <izz>0.000162</izz>
+        </inertia>
+      </inertial>
+      <gravity>true</gravity>
+      
+      <visual name="wheel2_link_1_visual">
+        <pose>1.136361 -0.509437 -0.342796 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>wheel2_link_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+            <ambient>0.2 0.2 0.2 1</ambient>
+            <diffuse>0.2 0.2 0.2 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+          </material>
+      </visual>
+    </link>
+
+
+    <joint name="wheel3_joint" type="revolute">
+      <pose>0.043639 -0.09661 0.252796 0 0 0</pose>
+      <parent>chassis</parent>
+      <child>wheel3_1</child>
+      <axis>
+        <xyz>0.0 -1.0 0.0</xyz>
+        <limit>
+            <lower>-1.79769e+308</lower>
+            <upper>1.79769e+308</upper>
+          </limit>
+      </axis>
+    </joint>
+
+    <joint name="wheel4_joint" type="revolute">
+      <pose>0.043639 0.54339 0.252796 0 0 0</pose>
+      <parent>chassis</parent>
+      <child>wheel4_1</child>
+      <axis>
+        <xyz>0.0 -1.0 0.0</xyz>
+        <limit>
+            <lower>-1.79769e+308</lower>
+            <upper>1.79769e+308</upper>
+          </limit>
+      </axis>
+    </joint>
+
+    <joint name="wheel2_joint" type="revolute">
+      <pose>0.0 0.033 -0.09 0 0 0</pose>
+      <parent>wheel2_link_1</parent>
+      <child>wheel2_1</child>
+      <axis>
+        <xyz>0.0 -1.0 0.0</xyz>
+        <limit>
+            <lower>-1.79769e+308</lower>
+            <upper>1.79769e+308</upper>
+          </limit>
+      </axis>
+    </joint>
+
+    <joint name="wheel1_joint" type="revolute">
+      <pose>0.0 -0.033 -0.09 0 0 0</pose>
+      <parent>wheel1_link_1</parent>
+      <child>wheel1_1</child>
+      <axis>
+        <xyz>0.0 -1.0 0.0</xyz>
+        <limit>
+            <lower>-1.79769e+308</lower>
+            <upper>1.79769e+308</upper>
+          </limit>
+      </axis>
+    </joint>
+
+    <joint name="wheel1_steering" type="revolute">
+      <pose>-1.136361 -0.06361 0.342796 0 0 0</pose>
+      <parent>chassis</parent>
+      <child>wheel1_link_1</child>
+      <axis>
+        <xyz>0.0 0.0 1.0</xyz>
+        <limit>
+            <lower>-0.6</lower>
+            <upper>+0.6</upper>
+            <velocity>1.0</velocity>
+            <effort>25</effort>
+          </limit>
+          <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <!-- <limit upper="0.523599" lower="-0.523599" effort="100" velocity="100"/> -->
+    </joint>
+
+    <joint name="wheel2_steering" type="revolute">
+      <pose>-1.136361 0.509437 0.342796 0 0 0</pose>
+      <parent>chassis</parent>
+      <child>wheel2_link_1</child>
+      <axis>
+        <xyz>0.0 0.0 -1.0</xyz>
+        <limit>
+          <lower>-0.6</lower>
+          <upper>+0.6</upper>
+          <velocity>1.0</velocity>
+          <effort>25</effort>
+        </limit>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <!-- <limit upper="0.523599" lower="-0.523599" effort="100" velocity="100"/> -->
+    </joint>
+
+    <plugin
+        filename="ignition-gazebo-ackermann-steering-system"
+        name="gz::sim::systems::AckermannSteering">
+        <left_joint>wheel1_joint</left_joint>
+        <left_joint>wheel3_joint</left_joint>
+        <right_joint>wheel2_joint</right_joint>
+        <right_joint>wheel4_joint</right_joint>
+        <left_steering_joint>wheel1_steering</left_steering_joint>
+        <right_steering_joint>wheel2_steering</right_steering_joint>
+        <kingpin_width>1.0</kingpin_width>
+        <steering_limit>0.55</steering_limit>
+        <wheel_base>1.0</wheel_base>
+        <wheel_separation>0.09</wheel_separation>
+        <wheel_radius>0.25</wheel_radius>
+        <min_velocity>-1</min_velocity>
+        <max_velocity>1</max_velocity>
+        <min_acceleration>-3</min_acceleration>
+        <max_acceleration>3</max_acceleration>
+      </plugin>
+    </model>
+  </world>
+</sdf>

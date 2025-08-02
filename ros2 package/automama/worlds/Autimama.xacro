@@ -1,0 +1,198 @@
+<?xml version="1.0" ?>
+<robot name="Autimama" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find Autimama_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find Autimama_description)/urdf/Autimama.trans" />
+<xacro:include filename="$(find Autimama_description)/urdf/Autimama.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.4195547534585827 0.22272554711801903 0.5183555009387848" rpy="0 0 0"/>
+    <mass value="114.59853782706756"/>
+    <inertia ixx="32.948053" iyy="61.158942" izz="41.100389" ixy="0.102632" iyz="-0.034967" ixz="2.864246"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Autimama_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Autimama_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel3_1">
+  <inertial>
+    <origin xyz="-1.3959603981095192e-07 -0.04494836313818579 -4.357814130662163e-07" rpy="0 0 0"/>
+    <mass value="19.301528013312776"/>
+    <inertia ixx="0.275927" iyy="0.536625" izz="0.275927" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.043639 0.09661 -0.252796" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Autimama_description/meshes/wheel3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.043639 0.09661 -0.252796" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Autimama_description/meshes/wheel3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel4_1">
+  <inertial>
+    <origin xyz="-1.3193427806507119e-07 0.044948129030530914 -4.432851846147834e-07" rpy="0 0 0"/>
+    <mass value="19.30152801331279"/>
+    <inertia ixx="0.275927" iyy="0.536625" izz="0.275927" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.043639 -0.54339 -0.252796" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Autimama_description/meshes/wheel4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.043639 -0.54339 -0.252796" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Autimama_description/meshes/wheel4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel2_1">
+  <inertial>
+    <origin xyz="-1.3690663536181091e-07 0.0672954800029184 -4.334913943915275e-07" rpy="0 0 0"/>
+    <mass value="19.53581228545425"/>
+    <inertia ixx="0.276668" iyy="0.536716" izz="0.276668" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="1.136361 -0.542437 -0.252796" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Autimama_description/meshes/wheel2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="1.136361 -0.542437 -0.252796" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Autimama_description/meshes/wheel2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel1_1">
+  <inertial>
+    <origin xyz="-1.3933370746066487e-07 -0.04494836313818579 -4.4256888215299384e-07" rpy="0 0 0"/>
+    <mass value="19.3015280133128"/>
+    <inertia ixx="0.275927" iyy="0.536625" izz="0.275927" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="1.136361 0.09661 -0.252796" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Autimama_description/meshes/wheel1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="1.136361 0.09661 -0.252796" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Autimama_description/meshes/wheel1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel1_link_1">
+  <inertial>
+    <origin xyz="-1.355089531696052e-07 -0.011876851439479072 -0.09132946238565198" rpy="0 0 0"/>
+    <mass value="0.6824187889856312"/>
+    <inertia ixx="0.000711" iyy="0.000693" izz="0.000162" ixy="-0.0" iyz="1.1e-05" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="1.136361 0.06361 -0.342796" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Autimama_description/meshes/wheel1_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="1.136361 0.06361 -0.342796" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Autimama_description/meshes/wheel1_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel2_link_1">
+  <inertial>
+    <origin xyz="-1.3550895072711455e-07 0.01206275012818847 -0.09138140441465087" rpy="0 0 0"/>
+    <mass value="0.6567511226697027"/>
+    <inertia ixx="0.000705" iyy="0.000683" izz="0.000156" ixy="0.0" iyz="-1.1e-05" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="1.136361 -0.509437 -0.342796" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Autimama_description/meshes/wheel2_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="1.136361 -0.509437 -0.342796" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Autimama_description/meshes/wheel2_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="wheel3_joint" type="continuous">
+  <origin xyz="0.043639 -0.09661 0.252796" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="wheel3_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="wheel4_joint" type="continuous">
+  <origin xyz="0.043639 0.54339 0.252796" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="wheel4_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="wheel2_joint" type="continuous">
+  <origin xyz="0.0 0.033 -0.09" rpy="0 0 0"/>
+  <parent link="wheel2_link_1"/>
+  <child link="wheel2_1"/>
+  <axis xyz="-0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="wheel1_joint" type="continuous">
+  <origin xyz="0.0 -0.033 -0.09" rpy="0 0 0"/>
+  <parent link="wheel1_link_1"/>
+  <child link="wheel1_1"/>
+  <axis xyz="-0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="wheel1_steering" type="revolute">
+  <origin xyz="-1.136361 -0.06361 0.342796" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="wheel1_link_1"/>
+  <axis xyz="-0.0 0.0 1.0"/>
+  <limit upper="0.523599" lower="-0.523599" effort="100" velocity="100"/>
+</joint>
+
+<joint name="wheel2_steering" type="revolute">
+  <origin xyz="-1.136361 0.509437 0.342796" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="wheel2_link_1"/>
+  <axis xyz="0.0 -0.0 -1.0"/>
+  <limit upper="0.523599" lower="-0.523599" effort="100" velocity="100"/>
+</joint>
+
+</robot>
