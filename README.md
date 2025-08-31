@@ -60,8 +60,6 @@ The **control and perception stacks** of Automama have been successfully deploye
 ---
 
 ### 🖼️ Custom Stereo Vision pipeline demo
-## 📷 Stereo Vision Pipeline (Project Automama – AGV)
-
 In **Project Automama (AGV)**, we developed a **custom stereo vision pipeline** to enable real-time 3D perception and depth estimation. The system was first validated in simulation, leveraging **GPU acceleration** for efficient processing.
 
 ### 🔑 Key Features
