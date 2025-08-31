@@ -12,6 +12,10 @@ To enable safe, repeatable, and low-cost testing of the autonomous system, we de
   - Dynamic actors (pedestrians, traffic vehicles)
   - Advanced road elements (signals, curbs, signage)
   - Photorealistic textures and materials
+<p align="center">
+  <img src="images/489543257_4007279232850217_8953987604735999948_n.jpg" alt="Orca AUV 1" width="350" height="250"/>
+  <img src="images/489858101_4007279086183565_7811755753336407419_n.jpg" alt="Orca AUV 2" width="350" height="205"/>
+</p>
 
 ---
 
