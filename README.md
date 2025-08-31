@@ -28,7 +28,7 @@ To enable safe, repeatable, and low-cost testing of the autonomous system, we de
   - Optional **camera, IMU, and LiDAR** plugins for perception testing
 - Tuned for accurate **steering, acceleration, and braking response**
 <p align="center">
-  <img src="gif/Screencast_from_03-25-2024_023752_AM.gif" alt="Orca AUV 3" width="700"/>
+  <img src="gif/Screencast_from_03-25-2024_023752_AM.gif" alt="Orca AUV 3" width="350"/>
 </p>
 
 ---
@@ -73,7 +73,8 @@ In **Project Automama (AGV)**, we developed a **custom stereo vision pipeline** 
 This pipeline laid the foundation for robust AGV perception, supporting tasks such as **obstacle detection, mapping, and navigation** in dynamic environments.
 
 <p align="center">
-  <img src="gif/Screencast from 01-27-2025 04-39-07 PM (2).gif" alt="Orca AUV 3" width="700"/>
+  <img src="gif/Screencast from 01-27-2025 04-39-07 PM (2).gif" alt="Orca AUV 3" width="350"/>
+  <img src="gif/Screencast from 01-11-2025 09-48-05 AM (2).gif" alt="Orca AUV 3" width="350"/>
 </p>
 
 ---
