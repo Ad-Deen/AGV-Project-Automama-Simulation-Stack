@@ -27,6 +27,9 @@ To enable safe, repeatable, and low-cost testing of the autonomous system, we de
   - Simulated **rotary encoder** and **brake actuator**
   - Optional **camera, IMU, and LiDAR** plugins for perception testing
 - Tuned for accurate **steering, acceleration, and braking response**
+<p align="center">
+  <img src="gif/Screencast_from_03-25-2024_023752_AM.gif" alt="Orca AUV 3" width="700"/>
+</p>
 
 ---
 
@@ -56,9 +59,22 @@ The **control and perception stacks** of Automama have been successfully deploye
 
 ---
 
-### 🖼️ Screenshots & Demo Videos
+### 🖼️ Custom Stereo Vision pipeline demo
+## 📷 Stereo Vision Pipeline (Project Automama – AGV)
 
-> *(Include screen captures or short GIFs here from Gazebo showing the Automama navigating the world)*
+In **Project Automama (AGV)**, we developed a **custom stereo vision pipeline** to enable real-time 3D perception and depth estimation. The system was first validated in simulation, leveraging **GPU acceleration** for efficient processing.
+
+### 🔑 Key Features
+- 🔹 **Stereo Image Processing** – disparity map computation from dual-camera simulation feeds.  
+- 🔹 **Depth Reconstruction** – conversion of disparity data into dense 3D point clouds.  
+- 🔹 **GPU Acceleration** – optimized computations for real-time performance.  
+- 🔹 **3D Point Cloud Visualization** – integrated with **VisPy**, enabling smooth, interactive rendering of point clouds in real time.  
+
+This pipeline laid the foundation for robust AGV perception, supporting tasks such as **obstacle detection, mapping, and navigation** in dynamic environments.
+
+<p align="center">
+  <img src="gif/Screencast from 01-27-2025 04-39-07 PM (2).gif" alt="Orca AUV 3" width="700"/>
+</p>
 
 ---
 
